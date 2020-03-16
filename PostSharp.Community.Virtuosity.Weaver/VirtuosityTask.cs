@@ -13,7 +13,9 @@ namespace PostSharp.Community.Virtuosity.Weaver
     {
         [ImportService]
         private IAnnotationRepositoryService annotationService;
-        
+
+        // TODO add in-build copyright notice
+
         public override bool Execute()
         {
             List<MethodDefDeclaration> alteredMethods = FindAndProcessMethodsToVirtualize();
