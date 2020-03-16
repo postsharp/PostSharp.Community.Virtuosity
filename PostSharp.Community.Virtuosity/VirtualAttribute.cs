@@ -7,7 +7,7 @@ namespace PostSharp.Community.Virtuosity
     /// All non-private properties and methods of the classes affected by this attribute will be changed to virtual.
     /// Affected methods that hide these methods are going to be changed to <c>override</c>.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property, AllowMultiple = true)]
     [MulticastAttributeUsage(MulticastTargets.Method | MulticastTargets.Property)]
     [RequirePostSharp("PostSharp.Community.Virtuosity.Weaver", "VirtuosityTask")]
     public class VirtualAttribute : MulticastAttribute
