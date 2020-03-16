@@ -32,7 +32,7 @@ class A
 #### How to use
 Add `[Virtual]` to the classes, namespaces or assemblies where you want it to apply. We call this [multicasting](https://doc.postsharp.net/attribute-multicasting).
 
-By annotating a class with [Virtual], you make all methods in that class `virtual` or `override`. By annotating the assembly, you make ALL methods virtual. As something in between, you can use the various properties of the `VirtualAttribute` to specify what kinds of methods of what classes should be made virtual.
+By annotating a class with `[Virtual]`, you make all methods in that class `virtual` or `override`. By annotating the assembly, you make ALL methods virtual. As something in between, you can use the various properties of the `VirtualAttribute` to specify what kinds of methods of what classes should be made virtual.
 
 For more details, read [Details and examples](Details_and_examples.md).
 
