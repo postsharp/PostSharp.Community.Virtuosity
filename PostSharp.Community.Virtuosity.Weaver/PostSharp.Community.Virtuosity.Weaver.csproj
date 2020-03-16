@@ -1,0 +1,21 @@
+<Project>
+    <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <SkipPostSharp>True</SkipPostSharp>
+        <LangVersion>8</LangVersion>
+        <NoWarn>CS0649</NoWarn>
+        <RootNamespace>PostSharp.Community.Virtuosity.Weaver</RootNamespace> 
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="PostSharp.Compiler.Engine" Version="6.6.1-preview" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PostSharp.Community.Virtuosity\PostSharp.Community.Virtuosity.csproj" />
+    </ItemGroup>
+
+    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

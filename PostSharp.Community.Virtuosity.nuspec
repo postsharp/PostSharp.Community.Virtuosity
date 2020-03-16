@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>PostSharp.Community.Virtuosity</id>
+    <version>1.0-preview</version>
+    <title>PostSharp.Community.Virtuosity</title>
+    <authors>PostSharp Technologies</authors>
+    <owners>PostSharp Technologies</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/postsharp/PostSharp.Community.Virtuosity</projectUrl>
+    <icon>icon.png</icon>
+    <description>Allows you to make all or almost all of your methods virtual.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>PostSharp Technologies</copyright>
+    <tags>postsharp ilweaving virtual virtuosity</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="PostSharp" version="[6.6.1-preview,7.0)" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="PostSharp.Community.Virtuosity\bin\Release\netstandard2.0\PostSharp.Community.Virtuosity.dll" target="lib\netstandard2.0"/>
+    <file src="PostSharp.Community.Virtuosity\bin\Release\netstandard2.0\PostSharp.Community.Virtuosity.xml" target="lib\netstandard2.0"/>
+    <file src="PostSharp.Community.Virtuosity.Weaver\bin\Release\netstandard2.0\PostSharp.Community.Virtuosity.Weaver.dll" target="tools"/>
+    <file src="icon.png" target="" />
+  </files>
+</package>
