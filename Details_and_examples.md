@@ -19,7 +19,7 @@ Make all public methods virtual (but not protected or internal methods):
 [assembly: Virtual(AttributeTargetMemberAttributes = MulticastAttributes.Public)]
 ```
 Make all methods within the namespace `My.Namespace` virtual:
-```
+```csharp
 [assembly: Virtual(AttributeTargetTypes = "My.Namespace.*")]
 ```
 Advanced case: If you apply `[Virtual]` to both a base method a `new` method with the same signature, it becomes an override.
