@@ -24,13 +24,13 @@ class A
 }
 ```
 
-#### Installation (as a user of this plugin)
+#### Installation
 1. Install the NuGet package: `PM> Install-Package PostSharp.Community.Virtuosity`
 2. Get a free PostSharp Community license at https://www.postsharp.net/essentials
 3. When you compile for the first time, you'll be asked to enter the license key.
 
 #### How to use
-Add `[Virtual]` to the classes, namespaces or assemblies where you want it to apply. We call this [multicasting](https://doc.postsharp.net/attribute-multicasting).
+Add `[Virtual]` to the classes, namespaces or assemblies where you want it to apply. We call this [multicasting](https://github.com/postsharp/Home/blob/master/multicasting.md).
 
 By annotating a class with [Virtual], you make all methods in that class `virtual` or `override`. By annotating the assembly, you make ALL methods virtual. As something in between, you can use the various properties of the `VirtualAttribute` to specify what kinds of methods of what classes should be made virtual.
 

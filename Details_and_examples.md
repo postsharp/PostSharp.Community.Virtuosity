@@ -1,5 +1,5 @@
 ## How Virtuosity works
-You apply the `[Virtual]` attribute to methods using [multicasting](https://doc.postsharp.net/attribute-multicasting). 
+You apply the `[Virtual]` attribute to methods using [multicasting](https://github.com/postsharp/Home/blob/master/multicasting.md). 
 
 The methods and properties that you apply `[Virtual]` to this way are turned into `virtual` or `override` methods or properties, as appropriate. 
 

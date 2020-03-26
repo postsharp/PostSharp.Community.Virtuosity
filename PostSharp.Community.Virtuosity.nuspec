@@ -4,7 +4,7 @@
     <id>PostSharp.Community.Virtuosity</id>
     <version>1.0-preview</version>
     <title>PostSharp.Community.Virtuosity</title>
-    <authors>PostSharp Technologies</authors>
+    <authors>Simon Cropp, PostSharp Technologies, and contributors</authors>
     <owners>PostSharp Technologies</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
