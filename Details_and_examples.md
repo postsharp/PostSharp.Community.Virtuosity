@@ -8,6 +8,10 @@ The following methods are excluded because they can't be virtual:
 * private methods
 * methods in sealed classes
 
+In addition:
+* annotated sealed methods are turned into virtual non-sealed methods
+* if you apply `[Virtual]` to both a base method and a `new` method with the same signature, the `new` methods becomes an `override` method.
+
 ## More examples
 Make all methods within class `A` virtual:
 ```csharp
@@ -22,7 +26,7 @@ Make all methods within the namespace `My.Namespace` virtual:
 ```csharp
 [assembly: Virtual(AttributeTargetTypes = "My.Namespace.*")]
 ```
-Advanced case: If you apply `[Virtual]` to both a base method a `new` method with the same signature, it becomes an override.
+Advanced case: If you apply `[Virtual]` to both a base method and a `new` method with the same signature, it becomes an override.
 
 So, if your code is:
 ```csharp
