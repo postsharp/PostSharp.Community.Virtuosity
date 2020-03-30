@@ -38,7 +38,7 @@ For more details, read [Details and examples](Details_and_examples.md).
 
 #### Limitations
 
-*Delegated:* Delegates to a `[Virtual]` method will always resolve to the method itself, not to the overwritten method in a derived class. That is, delegate creation will ignore the new virtual nature of the method.
+*Delegates:* Delegates to a `[Virtual]` method will always resolve to the method itself, not to the overwritten method in a derived class. That is, delegate creation will ignore the new virtual nature of the method.
 
 #### Copyright notices
 Released under the [MIT license](LICENSE.md).
