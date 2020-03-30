@@ -8,13 +8,13 @@ using PostSharp.Sdk.Extensibility.Tasks;
 
 namespace PostSharp.Community.Virtuosity.Weaver
 {
-    [ExportTask(Phase = TaskPhase.Transform, TaskName = nameof(VirtuosityTask))]
+    [ExportTask(Phase = TaskPhase.CustomTransform, TaskName = nameof(VirtuosityTask))]
     public class VirtuosityTask : Task
     {
         [ImportService]
         private IAnnotationRepositoryService annotationService;
 
-        // TODO add in-build copyright notice
+        public override string CopyrightNotice => "Simon Cropp, PostSharp Technologies, and contributors";
 
         public override bool Execute()
         {

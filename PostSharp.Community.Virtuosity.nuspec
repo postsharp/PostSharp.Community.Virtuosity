@@ -16,7 +16,7 @@
     <tags>postsharp ilweaving virtual virtuosity</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
-        <dependency id="PostSharp" version="[6.6.1-preview,7.0)" />
+        <dependency id="PostSharp" version="[6.6.3-preview,7.0)" />
       </group>
     </dependencies>
   </metadata>

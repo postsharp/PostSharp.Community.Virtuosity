@@ -18,12 +18,12 @@ namespace PostSharp.Community.Virtuosity.Tests
         }
 
         [Fact]
-        public void HidingMethod_WillBeVirtual()
+        public void HidingMethod_WillNotBeChanged()
         {
             var method = typeof(F).GetMethod("M");
 
             Assert.True((method.Attributes & System.Reflection.MethodAttributes.Virtual) != 0, "F.M is Virtual");
-            Assert.False((method.Attributes & System.Reflection.MethodAttributes.NewSlot) != 0, "F.M is NewSlot");
+            Assert.True((method.Attributes & System.Reflection.MethodAttributes.NewSlot) != 0, "F.M is NewSlot");
             Assert.False((method.Attributes & System.Reflection.MethodAttributes.Final) != 0, "F.M is Final");
         }
 
@@ -48,22 +48,22 @@ namespace PostSharp.Community.Virtuosity.Tests
         }
 
         [Fact]
-        public void SealedOverride_WillNotBeChanged()
+        public void SealedOverride_WillBeUnsealed()
         {
             var method = typeof(C).GetMethod("M");
 
             Assert.True((method.Attributes & System.Reflection.MethodAttributes.Virtual) != 0, "C.M is Virtual");
             Assert.False((method.Attributes & System.Reflection.MethodAttributes.NewSlot) != 0, "C.M is NewSlot");
-            Assert.True((method.Attributes & System.Reflection.MethodAttributes.Final) != 0, "C.M is Final");
+            Assert.False((method.Attributes & System.Reflection.MethodAttributes.Final) != 0, "C.M is Final");
         }
 
         [Fact]
-        public void HidingMethodAfterSealed_WillBeVirtualNewslot()
+        public void HidingMethodAfterSealed_WillBeUsingThatMethod()
         {
             var method = typeof(B).GetMethod("M");
 
             Assert.True((method.Attributes & System.Reflection.MethodAttributes.Virtual) != 0, "B.M is Virtual");
-            Assert.True((method.Attributes & System.Reflection.MethodAttributes.NewSlot) != 0, "B.M is NewSlot");
+            Assert.False((method.Attributes & System.Reflection.MethodAttributes.NewSlot) != 0, "B.M is NewSlot");
             Assert.False((method.Attributes & System.Reflection.MethodAttributes.Final) != 0, "B.M is Final");
         }
 
@@ -80,11 +80,11 @@ namespace PostSharp.Community.Virtuosity.Tests
         [Fact]
         public void ReturnValues()
         {
-            Assert.Equal(2, (new A() as G).M());
+            Assert.Equal(1, (new A() as G).M());
             Assert.Equal(2, (new A() as F).M());
-            Assert.Equal(5, (new A() as E).M());
-            Assert.Equal(5, (new A() as D).M());
-            Assert.Equal(5, (new A() as C).M());
+            Assert.Equal(7, (new A() as E).M());
+            Assert.Equal(7, (new A() as D).M());
+            Assert.Equal(7, (new A() as C).M());
             Assert.Equal(7, (new A() as B).M());
             Assert.Equal(7, (new A() as A).M());
         }
@@ -122,7 +122,7 @@ namespace PostSharp.Community.Virtuosity.Tests
         [Virtual]
         public class F : G
         {
-            public new int M() => 2;
+            public new int M() => 2; 
         }
 
         [Virtual]
