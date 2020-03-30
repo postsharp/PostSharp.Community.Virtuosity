@@ -14,7 +14,7 @@ namespace PostSharp.Community.Virtuosity.Weaver
         [ImportService]
         private IAnnotationRepositoryService annotationService;
 
-        public override string CopyrightNotice => "Simon Cropp, PostSharp Technologies, and contributors";
+        public override string CopyrightNotice => "Simon Cropp, SharpCrafters s.r.o., and contributors";
 
         public override bool Execute()
         {
@@ -52,6 +52,8 @@ namespace PostSharp.Community.Virtuosity.Weaver
 
         private void ConvertCallToCallvirt(List<MethodDefDeclaration> alteredMethods)
         {
+            // TODO: Handle Ldftn -> Ldvirtftn
+
             using Sdk.CodeWeaver.Weaver weaver = new Sdk.CodeWeaver.Weaver(this.Project);
             weaver.AddMethodLevelAdvice(new CallToCallvirtWeaverAdvice(), null, JoinPointKinds.InsteadOfCall, alteredMethods);
             weaver.Weave();

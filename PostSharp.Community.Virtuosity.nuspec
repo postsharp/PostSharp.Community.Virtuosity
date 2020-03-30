@@ -12,7 +12,7 @@
     <icon>icon.png</icon>
     <description>Allows you to make all or almost all of your methods virtual.</description>
     <releaseNotes>Initial release.</releaseNotes>
-    <copyright>PostSharp Technologies</copyright>
+    <copyright>Copyright (c) Simon Cropp, SharpCrafters s.r.o., and contributors</copyright>
     <tags>postsharp ilweaving virtual virtuosity</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
