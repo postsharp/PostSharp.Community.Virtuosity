@@ -1,8 +1,10 @@
 ## <img src="icon.png" width="32"> &nbsp; PostSharp.Community.Virtuosity 
 Allows you to make all target methods virtual without adding the virtual keyword to every one of them.
 
-*This is an add-in for [PostSharp](https://postsharp.net). It modifies your assembly during compilation by using IL weaving. The add-in functionality is in preview, and not yet public. This add-in might not work and is unsupported.*
+*This is an add-in for [PostSharp](https://postsharp.net). It modifies your assembly during compilation by using IL weaving.*
  
+![CI badge](https://github.com/postsharp/PostSharp.Community.Virtuosity/workflows/Full%20Pipeline/badge.svg)
+
 #### Example
 Your code:
 ```csharp
