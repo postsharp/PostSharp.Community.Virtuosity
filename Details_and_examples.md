@@ -34,7 +34,7 @@ So, if your code is:
 class Base {
     public int ReturnAnswer() => 42;
 }
-class Derived {
+class Derived : Base {
     public new int ReturnAnswer() => 6*9;
 }
 ```
@@ -44,7 +44,7 @@ Then what gets compiled is:
 class Base {
     public virtual int ReturnAnswer() => 42;
 }
-class Derived {
+class Derived : Base {
     public override int ReturnAnswer() => 6*9;
 }
 ```
